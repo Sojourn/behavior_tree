@@ -7,6 +7,7 @@ namespace bt {
 
     class Task;
 
+    // This class executes tasks, and can be embedded within tasks to implement parallel control flow paths.
     class Fiber {
         Fiber(Fiber&&) = delete;
         Fiber(const Fiber&) = delete;
@@ -17,11 +18,19 @@ namespace bt {
         Fiber(size_t stack_capacity, Allocator& allocator);
         ~Fiber();
 
+        // Start the fiber with an initial task.
         void start(Task& task);
+
+        // Ticks active tasks until they stop making progress. Returns the status of the initial task.
         Status run();
+
+        // Returns the status of the initial task.
         Status status() const;
+
+        // Forcefully stops a fiber. This should not be called from within run.
         void stop();
 
+        // Spawn a child task.
         void spawn(Task& task);
 
     private:

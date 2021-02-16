@@ -67,15 +67,17 @@ Status Fiber::run() {
 }
 
 void Fiber::stop() {
-    assert(fiber_status_ == Status::running);
     assert(idle_);
 
-    while (stack_size_) {
-        active_task().stop();
-        pop_task();
+    if (fiber_status_ == Status::running) {
+        while (stack_size_) {
+            active_task().stop();
+            pop_task();
+        }
+
+        fiber_status_ = Status::failure;
     }
 
-    fiber_status_ = Status::failure;
     assert(stack_size_ == 0);
 }
 
