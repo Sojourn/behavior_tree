@@ -7,6 +7,13 @@
 
 namespace {
 
+    // This class is a node in a tree of scopes that let a node export properties, and child nodes to import those
+    // properties by name. Type safety is enforced at runtime during the import, not subsequent accesses.
+    //
+    // The BehaviorTree can be constructed with an initial, global scope. This can be used to expose information
+    // about the 'entity' that exists independently of the behavior tree. The global scope can also be used to provide
+    // access to outside systems in order to perform actions.
+    //
     class PropertyMap {
     public:
         PropertyMap(PropertyMap* parent = nullptr)
