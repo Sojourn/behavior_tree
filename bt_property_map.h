@@ -21,8 +21,8 @@ namespace {
             }
 
             properties_.insert(std::make_pair(name, Property {
-                    typeid(T),
-                    &property
+                typeid(T),
+                &property
             }));
         }
 
@@ -33,8 +33,8 @@ namespace {
             }
 
             mutable_properties_.insert(std::make_pair(name, MutableProperty {
-                    typeid(T),
-                    &property
+                typeid(T),
+                &property
             }));
         }
 
