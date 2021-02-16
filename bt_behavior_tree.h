@@ -26,10 +26,9 @@ namespace bt {
         }
 
         ~BehaviorTree() {
-            if (fiber_.status() == Status::running) {
-                fiber_.stop();
-            }
+            fiber_.stop(); // explicitly stop before the backing tasks are deallocated
 
+            // TODO: think about if the order in which we deallocate tasks matters
             for (size_t i = 0; i < task_count_; ++i) {
                 allocator_.deallocate(*tasks_[i]);
             }
