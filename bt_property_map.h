@@ -5,7 +5,7 @@
 #include <typeinfo>
 #include <stdexcept>
 
-namespace {
+namespace bt {
 
     // This class is a node in a tree of scopes that let a node export properties, and child nodes to import those
     // properties by name. Type safety is enforced at runtime during the import, not subsequent accesses.
