@@ -19,7 +19,7 @@ namespace bt {
         BehaviorTree& operator=(const BehaviorTree&) = delete;
 
     public:
-        BehaviorTree(const RootNode& root, PropertyMap& properties, Allocator& allocator);
+        BehaviorTree(const RootNode& root, PropertyMap& properties, Allocator& allocator = GlobalAllocator::instance());
         ~BehaviorTree();
 
         Status run();
