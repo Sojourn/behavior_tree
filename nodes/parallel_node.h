@@ -4,7 +4,7 @@
 #include "behavior_tree/task.h"
 #include "behavior_tree/fiber.h"
 
-namespace bt {
+namespace behavior_tree {
 
     class ParallelNode : public Node {
         class ParallelTask : public Task {

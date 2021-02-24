@@ -10,7 +10,7 @@
 #include "fiber.h"
 #include "nodes/root_node.h"
 
-namespace bt {
+namespace behavior_tree {
 
     class BehaviorTree {
         BehaviorTree(BehaviorTree&&) = delete;

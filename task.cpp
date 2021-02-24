@@ -1,9 +1,9 @@
 #include <stdexcept>
 #include "task.h"
 
-using namespace bt;
+using namespace behavior_tree;
 
-std::string_view bt::to_string(Status status) {
+std::string_view behavior_tree::to_string(Status status) {
     using namespace std::literals;
 
     switch (status) {

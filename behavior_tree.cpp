@@ -1,6 +1,6 @@
 #include "behavior_tree.h"
 
-using namespace bt;
+using namespace behavior_tree;
 
 namespace {
     size_t node_count(const Node& root) {

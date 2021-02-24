@@ -3,7 +3,7 @@
 #include "allocator.h"
 #include "task.h"
 
-namespace bt {
+namespace behavior_tree {
 
     class Task;
 

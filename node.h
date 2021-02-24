@@ -6,7 +6,7 @@
 #include "allocator.h"
 #include "property_map.h"
 
-namespace bt {
+namespace behavior_tree {
 
     class Node {
         Node(Node&&) = delete;

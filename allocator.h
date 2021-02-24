@@ -7,7 +7,7 @@
 #include <cstddef>
 #include <cassert>
 
-namespace bt {
+namespace behavior_tree {
 
     class Allocator {
         Allocator(Allocator&&) = delete;

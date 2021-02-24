@@ -4,7 +4,7 @@
 #include "behavior_tree/node.h"
 #include "behavior_tree/fiber.h"
 
-namespace bt {
+namespace behavior_tree {
 
     class SelectorNode : public Node {
         class SelectorTask : public Task {

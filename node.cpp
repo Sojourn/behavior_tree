@@ -2,7 +2,7 @@
 #include <algorithm>
 #include <stdexcept>
 
-using namespace bt;
+using namespace behavior_tree;
 
 Node::~Node() {
 }

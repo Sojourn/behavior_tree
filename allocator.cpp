@@ -2,7 +2,7 @@
 
 #include "allocator.h"
 
-using namespace bt;
+using namespace behavior_tree;
 
 Allocator& GlobalAllocator::instance() {
     static GlobalAllocator self;

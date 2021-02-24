@@ -3,7 +3,7 @@
 #include <stdexcept>
 #include "behavior_tree/node.h"
 
-namespace bt {
+namespace behavior_tree {
 
     class FailureNode : public Node {
         class FailureTask : public Task {

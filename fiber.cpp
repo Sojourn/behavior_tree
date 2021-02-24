@@ -1,6 +1,6 @@
 #include "fiber.h"
 
-using namespace bt;
+using namespace behavior_tree;
 
 Fiber::Fiber(size_t stack_capacity, Allocator& allocator)
     : fiber_status_(Status::failure)
