@@ -27,39 +27,19 @@ namespace behavior_tree {
         Task& operator=(const Task&) = delete;
 
     public:
-        Task()
-            : status_(Status::success)
-            , children_(nullptr)
-            , child_count_(0)
-        {
-        }
+        Task();
 
-        Status status() {
-            return status_;
-        }
-
-        Task& child(size_t child_index=0) {
-            assert(child_index < child_count());
-            return *children_[child_index];
-        }
-
-        size_t child_count() const {
-            return child_count_;
-        }
+        Status status() const;
+        Task& child(size_t child_index = 0);
+        size_t child_count() const;
 
         virtual void start(Fiber& fiber) {}
         virtual Status run(Fiber& fiber) = 0;
         virtual void stop() {}
 
     private:
-        void set_status(Status status) {
-            status_ = status;
-        }
-
-        void set_children(Task** children, size_t child_count) {
-            children_ = children;
-            child_count_ = child_count;
-        }
+        void set_status(Status status);
+        void set_children(Task** children, size_t child_count);
 
     private:
         Status status_;
