@@ -1,8 +1,8 @@
 #pragma once
 
 #include <cstddef>
-#include "../bt_node.h"
-#include "../bt_fiber.h"
+#include "behavior_tree/node.h"
+#include "behavior_tree/fiber.h"
 
 namespace bt {
 

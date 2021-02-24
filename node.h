@@ -2,9 +2,9 @@
 
 #include <memory>
 #include <vector>
-#include "bt_task.h"
+#include "task.h"
 #include "bt_allocator.h"
-#include "bt_property_map.h"
+#include "property_map.h"
 
 namespace bt {
 

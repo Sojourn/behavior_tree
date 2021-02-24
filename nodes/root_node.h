@@ -1,7 +1,7 @@
 #pragma once
 
 #include <stdexcept>
-#include "../bt_node.h"
+#include "../node.h"
 
 namespace bt {
 

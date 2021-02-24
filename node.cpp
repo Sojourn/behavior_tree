@@ -1,4 +1,4 @@
-#include "bt_node.h"
+#include "node.h"
 #include <algorithm>
 #include <stdexcept>
 

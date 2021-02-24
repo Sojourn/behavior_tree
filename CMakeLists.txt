@@ -1,6 +1,5 @@
-cmake_minimum_required(VERSION 3.17)
-project(behavior_tree)
+file(GLOB_RECURSE SOURCE_FILES *.cpp)
+file(GLOB_RECURSE HEADER_FILES *.h)
 
-set(CMAKE_CXX_STANDARD 20)
-
-add_executable(behavior_tree main.cpp bt_node.h bt_node.cpp bt_behavior_tree.h nodes/bt_root_node.h nodes/bt_parallel_node.h nodes/bt_sequence_node.h nodes/bt_selector_node.h bt_property_map.h bt_task.h bt_allocator.h bt_fiber.h nodes/bt_success_node.h nodes/bt_failure_node.h bt_fiber.cpp nodes/bt_condition_node.h bt_task.cpp bt_behavior_tree.cpp)
+add_library(behavior_tree ${SOURCE_FILES} ${HEADER_FILES})
+target_include_directories(behavior_tree PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/src)

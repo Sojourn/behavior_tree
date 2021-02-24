@@ -6,9 +6,9 @@
 #include <cstddef>
 #include <cstring>
 #include "bt_allocator.h"
-#include "bt_property_map.h"
-#include "bt_fiber.h"
-#include "nodes/bt_root_node.h"
+#include "property_map.h"
+#include "fiber.h"
+#include "nodes/root_node.h"
 
 namespace bt {
 

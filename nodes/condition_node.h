@@ -1,8 +1,8 @@
 #pragma once
 
 #include <cstdint>
-#include "../bt_node.h"
-#include "../bt_task.h"
+#include "behavior_tree/node.h"
+#include "behavior_tree/task.h"
 
 namespace bt {
 
