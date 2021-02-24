@@ -67,6 +67,10 @@ namespace bt {
     };
 
     class GlobalAllocator : public Allocator {
+    public:
+        static Allocator& instance();
+
+    private:
         void* allocate_storage(size_t size) override {
             void* storage = malloc(size);
             assert(storage);
@@ -81,6 +85,7 @@ namespace bt {
 
     class ArenaAllocator : public Allocator {
     public:
+        // TODO: make this resizable or give it capacity argument
         ArenaAllocator(Allocator& allocator)
             : allocator_(allocator)
             , capacity_(128 * 1024)

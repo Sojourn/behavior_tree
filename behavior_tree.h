@@ -5,7 +5,7 @@
 #include <cstdint>
 #include <cstddef>
 #include <cstring>
-#include "bt_allocator.h"
+#include "allocator.h"
 #include "property_map.h"
 #include "fiber.h"
 #include "nodes/root_node.h"
@@ -19,7 +19,7 @@ namespace bt {
         BehaviorTree& operator=(const BehaviorTree&) = delete;
 
     public:
-        BehaviorTree(const RootNode& root, PropertyMap& properties, Allocator& allocator);
+        BehaviorTree(const RootNode& root, PropertyMap& properties, Allocator& allocator = GlobalAllocator::instance());
         ~BehaviorTree();
 
         Status run();

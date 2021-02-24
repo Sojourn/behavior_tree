@@ -3,7 +3,7 @@
 #include <memory>
 #include <vector>
 #include "task.h"
-#include "bt_allocator.h"
+#include "allocator.h"
 #include "property_map.h"
 
 namespace bt {
